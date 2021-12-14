@@ -15,7 +15,7 @@ public class StudentList extends LinkedList {
         int j;
         while (scanner.hasNextLine()) {
             line = scanner.nextLine();
-            fields = line.split("\t");
+            fields = line.split("\\s{2,}");
             student = new Student(fields[0]);
             int moyenne = 0, sum = 0, count = 0;
 
@@ -28,7 +28,7 @@ public class StudentList extends LinkedList {
                 //System.out.println("ok c'est ça");
                 for (j = 1, count = 0; j < fields.length; j++) {
                     //System.out.print("ok c'est ça");
-                    student.getNotes().append(Float.valueOf(fields[j]));
+                    student.addNote.append(Float.parseFloat(fields[j]));
                 }
             }
         }
