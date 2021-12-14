@@ -10,20 +10,17 @@ public class Application {
         //source.Professeur professeur = new source.Professeur(fields[0]);
         File file = new File("data.txt");
 
-        Menu menu = new Menu(2);
-        Menu.Afficher();
-        System.out.println(menu);
+        Menu.display();
         Scanner scan = new Scanner(System.in);
 
         switch (scan.nextInt()) {
             case 1:
                 try {
                     //studentList.load(file, );
-                    System.out.println("source.Etudiant>");
-                    Scanner etudiant = new Scanner(System.in);
-                    String et = etudiant.nextLine();
-                    studentList.load(file, et);
-                    System.out.println(studentList);
+                    System.out.print("Nom de l'étudiant > ");
+                    Scanner studentNameScanner = new Scanner(System.in);
+                    String studentName = studentNameScanner.nextLine();
+                    studentList.load(file, studentName);
                 } catch (FileNotFoundException e) {
                     System.out.print("Fichier introuvable");
                 }

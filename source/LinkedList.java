@@ -1,9 +1,9 @@
 package source;
 
 public class LinkedList {
-    private LinkedList next;
-    private Object content;
-    private final String separator;
+    protected LinkedList next;
+    protected Object content;
+    final String separator;
 
     public LinkedList(String separator) {
         this(separator, null);
@@ -16,7 +16,6 @@ public class LinkedList {
     }
 
     public void append(Object o) {
-        System.out.println("ah ");
         if (this.content == null) {
             this.content = o;
         } else {
@@ -33,7 +32,9 @@ public class LinkedList {
         StringBuilder sb = new StringBuilder();
         LinkedList current = this;
         while (current != null) {
-            sb.append(current.content + current.separator);
+            sb
+                    .append(current.content)
+                    .append(current.separator);
             current = current.next;
         }
         return sb.toString();

@@ -1,7 +1,6 @@
 package source;
 
 public class Student {
-    int moyenne = 0, count = 0;
     private final String name;
     private final NoteList notes;
     private int sum;
@@ -12,15 +11,23 @@ public class Student {
     }
 
     public NoteList getNotes() {
-         /*System.out.println("note : ");
-         sum += moy;*/
-        System.out.println("moy: ");
-        System.out.println(notes);
         return notes;
+    }
+
+    public void addNote(float note) {
+        notes.append(note);
+    }
+
+    public Float getAverage() {
+        return notes.average();
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
     public String toString() {
-        return String.format("ok %s\n\t%s", name, notes);
+        return String.format("%s\n\t%s", name, notes);
     }
 }
