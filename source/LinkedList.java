@@ -1,7 +1,9 @@
+package source;
+
 public class LinkedList {
     private LinkedList next;
     private Object content;
-    private String separator;
+    private final String separator;
 
     public LinkedList(String separator) {
         this(separator, null);

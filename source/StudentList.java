@@ -1,3 +1,5 @@
+package source;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -19,7 +21,7 @@ public class StudentList extends LinkedList {
             student = new Student(fields[0]);
             int moyenne = 0, sum = 0, count = 0;
 
-            if(fields[0].contains(et)){
+            if (fields[0].contains(et)) {
                 //System.out.println("ok");
                 //System.out.println(fields[0]); ok pour la liste des étudiants
                 System.out.println("Voici l'étudiant et ses notes:");

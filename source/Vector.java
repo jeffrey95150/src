@@ -1,5 +1,7 @@
+package source;
+
 public class Vector {
-    private float[] values;
+    private final float[] values;
 
     Vector(int size) {
         values = new float[size];

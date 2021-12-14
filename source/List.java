@@ -1,5 +1,7 @@
+package source;
+
 public class List {
-    private String name;
+    private final String name;
 
     List(String name) {
         this.name = name;

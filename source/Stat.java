@@ -1,3 +1,5 @@
+package source;
+
 public class Stat {
     private float sum;
     private int count;

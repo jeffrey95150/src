@@ -1,9 +1,10 @@
+package source;
+
 import java.io.File;
-import java.util.Scanner;
 
 public class Etudiant {
 
-    private String name;
+    private final String name;
     private String Rname;
 
     Etudiant(String name, File file) {
@@ -11,7 +12,7 @@ public class Etudiant {
         this.Rname = Rname;
     }
 
-    public void recup(String name){
+    public void recup(String name) {
         System.out.println("ok");
     }
 

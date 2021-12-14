@@ -1,3 +1,5 @@
+package source;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -11,7 +13,7 @@ public class Professeur extends LinkedList {
         super("\n");
     }
 
-    public String[] getList(String[] fields){
+    public String[] getList(String[] fields) {
         return fields;
     }
 
@@ -26,7 +28,7 @@ public class Professeur extends LinkedList {
             fields = line.split("\t");
             professeur = new Professeur(fields[0]);
 
-            if(fields[0].contains("#")){
+            if (fields[0].contains("#")) {
                 //System.out.println("ok");
                 //System.out.println(fields[0]); ok pour la liste des étudiants
                 append(professeur);
